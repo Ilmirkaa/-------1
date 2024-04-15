@@ -34,13 +34,36 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+   
+    padding-top: 100px;
 }
+
+
 
 .name {
     width: 340px;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 200px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
 }
+
+.name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    }
+    
+    @keyframes fadeIn {
+    0% {
+    opacity: 0;
+    }
+    
+    100% {
+    opacity: 1;
+    }}
 
 .about p {
         font-weight: 300;
@@ -69,7 +92,7 @@ body {
 .kalen {
     padding-top: 70px;
 }
-
+    
 
 
 /* location */
