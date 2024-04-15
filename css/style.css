@@ -1,0 +1,454 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family:felidae;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+
+}
+
+.container {
+    max-width: 300px;
+}
+
+@font-face {
+    src: url(/fonts/qategina-amistark-2.ttf);
+    font-family: 'love';
+}
+
+@font-face{font-family:felidae;
+    font-style:normal;
+    font-weight:400;
+    src:local('Felidae'),
+    url(https://fonts.cdnfonts.com/s/85576/Felidae.woff) 
+    format('woff')}
+
+body {
+    background-color: #E3DED5;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.name {
+    width: 340px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.about p {
+        font-weight: 300;
+        font-style: normal;
+        font-size: 27px;
+        text-align: center;
+        padding-top: 24px;
+        font-family:felidae;
+}
+
+.location p {
+    font-weight: 300;
+        font-style: normal;
+        font-size: 24px;
+        text-align: center;
+        padding-top: 24px;
+        font-family:felidae;
+}
+
+.glav {
+    width: 300px;
+    border-radius: 20px;
+}
+
+
+.kalen {
+    padding-top: 70px;
+}
+
+
+
+/* location */
+
+
+h2 {
+    font-weight: 300;
+    font-style: normal;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 70px;
+    font-family:felidae;
+    padding-bottom: 30px;
+
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.map {
+    border: 1px solid rgba(0, 0, 0, 0.767);
+    background-color: #d1cbbd;
+    color: rgba(0, 0, 0, 0.767);
+    padding: 15px;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+    font-family:felidae;
+    padding-top: 30px;
+}
+
+.loc {
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    font-family:felidae;
+    color: rgba(0, 0, 0, 0.677);
+    padding-top: 24px;
+    
+}
+
+
+/* contact */
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.plan {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+.contact a {
+    color: black;
+}
+
+.contact p {
+        font-weight: 300;
+        font-style: normal;
+        font-size: 24px;
+        text-align: center;
+        font-family:felidae;
+        padding-bottom: 24px;
+        padding-top: 24px;
+}
+
+
+/* anceta */
+
+.anceta  {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    padding-bottom: 70px;
+}
+
+.anceta h2 {
+    font-weight: 300;
+    font-style: normal;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 70px;
+    font-family:felidae;
+    padding-bottom: 20px;
+}
+
+.anceta p {
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    font-family:felidae;
+   
+}
+
+
+input {
+    display: flex;
+    flex-direction: row;
+}
+
+.anceta h3 {
+    text-align: left;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    font-family:felidae;
+    padding-bottom: 20px;
+}
+
+.inp {
+    border: 1px solid rgba(0, 0, 0, 0.656);
+    background-color: #DAD4C8;
+    color: rgba(0, 0, 0, 0.656);
+    padding: 15px;
+    width: 300px;
+    border-radius: 30px;
+}
+
+::-webkit-input-placeholder {
+    color: #6b5733;
+    font-weight: 400;
+    border: none;
+}
+
+input[type="text"] {
+    border:1px solid #6b5733;
+    color: #6b5733;
+    font-size: 20px;
+}
+
+
+
+
+
+.form_input {
+	width:100%;
+	overflow:hidden;
+}
+
+.form_input input[type="checkbox"] {
+	float:left;
+}
+
+.form_input input[type="radio"] {
+	float:left;
+}
+
+.form_input label {
+	margin-left:5px;
+	float:left;
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+
+.form_input .form_btn {
+    border: 1px solid rgba(0, 0, 0, 0.656);
+    background-color: #DAD4C8;
+    color: rgba(0, 0, 0, 0.656);
+    padding: 15px;
+    width: 200px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+	margin: 0 auto;
+	display: block;
+}
+
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+    input[type='checkbox'],
+    input[type='radio'] {
+      --active: #b7b1a6;
+      --active-inner: #fff;
+      /* --focus: 2px rgba(133, 131, 105, 0.3); */
+      --border: #58544d;
+      --border-hover: #DAD4C8;
+      --background: #E3DED5;
+      --disabled: #F6F8FF;
+      --disabled-inner: #E1E6F9;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      height: 21px;
+      outline: none;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      margin: 0;
+      cursor: pointer;
+      border: 1px solid var(--bc, var(--border));
+      background: var(--b, var(--background));
+      transition:  .3s, border-color .3s, box-shadow .2s;
+      &:after {
+        content: '';
+        display: block;
+        left: 0;
+        top: 0;
+        position: absolute;
+        transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+      }
+      &:checked {
+        --b: var(--active);
+        --bc: var(--active);
+        --d-o: .3s;
+        --d-t: .6s;
+        --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+      }
+      &:disabled {
+        --b: var(--disabled);
+        cursor: not-allowed;
+        opacity: .9;
+        &:checked {
+          --b: var(--disabled-inner);
+          --bc: var(--border);
+        }
+        & + label {
+          cursor: not-allowed;
+        }
+      }
+      &:hover {
+        &:not(:checked) {
+          &:not(:disabled) {
+            --bc: var(--border-hover);
+          }
+        }
+      }
+      &:focus {
+        box-shadow: 0 0 0 var(--focus);
+      }
+      &:not(.switch) {
+        width: 21px;
+        &:after {
+          opacity: var(--o, 0);
+        }
+        &:checked {
+          --o: 1;
+        }
+      }
+      & + label {
+        font-size: 18px;
+        line-height: 21px;
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        margin-left: 7px;
+      }
+    }
+    input[type='checkbox'] {
+      &:not(.switch) {
+        border-radius: 7px;
+        &:after {
+          width: 5px;
+          height: 9px;
+          border: 2px solid var(--active-inner);
+          border-top: 0;
+          border-left: 0;
+          left: 7px;
+          top: 4px;
+          transform: rotate(var(--r, 20deg));
+        }
+        &:checked {
+          --r: 43deg;
+        }
+      }
+      &.switch {
+        width: 38px;
+        border-radius: 11px;
+        &:after {
+          left: 2px;
+          top: 2px;
+          border-radius: 50%;
+          width: 15px;
+          height: 15px;
+          background: var(--ab, var(--border));
+          transform: translateX(var(--x, 0));
+        }
+        &:checked {
+          --ab: var(--active-inner);
+          --x: 17px;
+        }
+        &:disabled {
+          &:not(:checked) {
+            &:after {
+              opacity: .6;
+            }
+          }
+        }
+      }
+    }
+    input[type='radio'] {
+      border-radius: 50%;
+      &:after {
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        background: var(--active-inner);
+        opacity: 0;
+        transform: scale(var(--s, .7));
+      }
+      &:checked {
+        --s: .5;
+      }
+    }
+  }
+
+
+  .inp:focus {
+    color: #212529;
+    background-color: #E3DED5;
+    border-color: #E3DED5;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(116, 101, 60, 0.25);
+  }
+
+  /* schet */
+.schet {
+    padding-top: 12vh;
+    background-image: url(../media/schet.png);
+    
+    background-size: cover;
+    height: 50vh;
+}
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  .countdown-item {
+    text-align: center;
+  }
+   
+  .countdown-item span {
+    display: block;
+    font-size: 30px;
+  }
+   
+  .label {
+    font-size: 25px;
+    color: #ffffff;
+  }
+
+  .time {
+    color: #ffffff;
+    font-size: 40px;
+  }
+
+  .schet h2 {
+    color: white;
+  }
+
+
+
+  .with_love {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .with_love img {
+    width: 350px;
+  }
