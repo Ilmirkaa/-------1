@@ -22,30 +22,12 @@
 
         <div class="about">
 
-            <img src="media/Зульфат & Азалия.svg" alt="" class="name">
+            <img src="media/Зульфат & Азалия.svg" alt="" class="fade-in name">
 
-            <!-- <audio id="myAudio" src="song/Drilland_-_Mood_Melodic_Drill_Type_Beat_77465656.mp3" controls
-                style="display: none"></audio>
-            <button onclick="document.getElementById('myAudio').play()">
-                <img src="song/Audio.svg" alt="Play">
-            </button>
-
-            <button onclick="document.getElementById('myAudio').pause()"><img src="song/No Audio.svg"
-                    alt="pause"></button>
-            <script>
-                var myAudio = document.getElementById("myAudio");
-
-                function playAudio() {
-                    myAudio.play();
-                }
-
-                function pauseAudio() {
-                    myAudio.pause();
-                }
-            </script> -->
+           
             <img src="media/glavn.png" alt="" class="glav">
 
-            <p>Дорогие родные и друзья! <br>Мы приглашаем вас на нашу свадьбу!</p>
+            <p class="fade-in">Дорогие родные и друзья! <br>Мы приглашаем вас на нашу свадьбу!</p>
 
             <img src="media/kalen.svg" alt="" class="kalen">
         </div>
@@ -53,16 +35,16 @@
         <div class="location">
             <h2>ЛОКАЦИЯ</h2>
             <img src="media/loc (1).png" alt="">
-            <h3>г. Казань, ул. Гаврилова 32</h3>
-            <p class="loc">банкетный зал « Emerald Hall »</p>
+            <h3 class="fade-in">г. Казань, ул. Гаврилова 32</h3>
+            <p class="loc fade-in">банкетный зал « Emerald Hall »</p>
             <a href="https://yandex.ru/maps/-/CDVQqEZw" class="map" target="_blank">Посмотреть на карте</a>
 
 
         </div>
 
-        <div class="contact">
+        <div class="contact fade-in">
             <img src="media/plan (2).svg" alt="" class="plan">
-            <h2>КОНТАКТЫ</h2>
+            <h2 >КОНТАКТЫ</h2>
 
             <p> Зульфат <a href=»tel:1234567890″>+79520374652</a></p>
             <a href="https://wa.me/79520374652"><img src="media/WhatsApp.svg" alt=""></a>
@@ -76,52 +58,52 @@
             <h2>АНКЕТА</h2>
             <p>Ответьте, пожалуйста, на вопросы!</p>
 
-            <form action="" id="myForm">
+            <form method="post" action="" name="submit-to-google-sheet" onsubmit="return submitForm()">
 
                 <h3>ВАШЕ ИМЯ И ФАМИЛИЯ</h3>
                 <input type="text" placeholder="ФИО" name="name" id="name" autocomplete="off" required class="inp">
                 <h3>ВЫ СМОЖЕТЕ ПРИСУТСТВОВАТЬ?</h3>
                 <div class="form_input">
-                    <input type="radio" id="otvet" name="ans" class="checkbox" />
+                    <input type="radio" id="otvet"  name="otvet" class="checkbox" />
                     <label for="opt1">Я с удовольствием приду</label>
                 </div>
                 <div class="form_input">
-                    <input type="radio" id="otvet" name="ans" class="checkbox" />
+                    <input type="radio" id="otvet" name="otvet" class="checkbox" />
                     <label for="opt2">К сожалению, не смогу присутствовать</label>
                 </div>
                 <div class="form_input">
-                    <input type="radio" id="otvet" name="ans" class="checkbox" />
+                    <input type="radio" id="otvet"  name="otvet" class="checkbox" />
                     <label for="opt2">Сообщу позже</label>
                 </div>
 
                 <h3>ЧТО ПРЕДПОЧИТАЕТЕ ИЗ НАПИТКОВ?</h3>
                 <div class="form_input">
-                    <input type="checkbox" id="alc" name="alc" class="checkbox" />
+                    <input type="checkbox" id="alc" name="alc"  class="checkbox" />
                     <label for="alc">Красное вино</label>
                 </div>
 
                 <div class="form_input">
-                    <input type="checkbox" id="alc" name="alc" class="checkbox" />
+                    <input type="checkbox" id="alc" name="alc"  class="checkbox" />
                     <label for="alc">Белое вино</label>
                 </div>
 
                 <div class="form_input">
-                    <input type="checkbox" id="alc" name="alc" class="checkbox" />
+                    <input type="checkbox" id="alc" name="alc"  class="checkbox" />
                     <label for="alc">Шампанское</label>
                 </div>
 
                 <div class="form_input">
-                    <input type="checkbox" id="alc" name="alc" class="checkbox" />
+                    <input type="checkbox" id="alc" name="alc"  class="checkbox" />
                     <label for="alc">Самагон</label>
                 </div>
 
                 <div class="form_input">
-                    <input type="checkbox" id="alc" name="alc" class="checkbox" />
+                    <input type="checkbox" id="alc" name="alc"  class="checkbox" />
                     <label for="alc">Водка</label>
                 </div>
 
                 <div class="form_input">
-                    <input type="checkbox" id="alc" name="alc" class="checkbox" />
+                    <input type="checkbox" id="alc" name="alc"  class="checkbox" />
                     <label for="alc">Я не пью</label>
                 </div>
 
@@ -136,6 +118,39 @@
 
 
         </div>
+
+        <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby1ZsJMg_DP7winqz9-B51bQdL7LqPcLdwiYtbvpW9HwSFyV3hwBH3akUWzSoIzn9yG/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<script>
+    function submitForm() {
+      var checkbox = document.getElementById("otvet");
+      var checkboxValue = checkbox.checked ? "checked" : "unchecked"; // изменяем значение чекбокса
+    
+      let formData = new FormData(document.getElementById("submit-to-google-sheet"));
+      formData.set("otvet", checkboxValue); // устанавливаем новое значение чекбокса
+    
+      // отправляем данные в Google таблицу
+      fetch('https://script.google.com/macros/s/AKfycbwOxmVYDUQe8cYFvVW1OYwKWvE9QBobDhGUM7ySrooCR9c5i5sWFoyGfYIq4uWW3-rT/exec', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error('Error:', error));
+    
+      return false; // отменяем отправку формы
+    }
+    </script>
 
         <div class="schet">
 

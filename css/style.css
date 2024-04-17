@@ -13,6 +13,22 @@
     max-width: 300px;
 }
 
+.fade-in {
+  opacity: 0; /* начальное значение непрозрачности */
+  animation: fadeIn ease-in 1; /* добавляем анимацию fadeIn */
+  animation-fill-mode: forwards; /* будет видимым после завершения анимации */
+  animation-duration: 1s; /* длительность анимации в 1 секунду */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @font-face {
     src: url(/fonts/qategina-amistark-2.ttf);
     font-family: 'love';
@@ -35,35 +51,18 @@ body {
     justify-content: center;
     flex-direction: column;
    
-    padding-top: 100px;
+    padding-top: 30px;
 }
 
 
 
 .name {
     width: 340px;
-    padding-bottom: 200px;
-    padding-top: 10px;
+    padding-bottom: 20px;
+    /* padding-top: 10px; */
     display: flex;
     align-items: center;
 }
-
-.name {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    }
-    
-    @keyframes fadeIn {
-    0% {
-    opacity: 0;
-    }
-    
-    100% {
-    opacity: 1;
-    }}
 
 .about p {
         font-weight: 300;
@@ -426,7 +425,7 @@ input[type="text"] {
 
   /* schet */
 .schet {
-    padding-top: 12vh;
+    padding-top: 10vh;
     background-image: url(../media/schet.png);
     
     background-size: cover;
@@ -441,25 +440,27 @@ input[type="text"] {
    
   .countdown-item {
     text-align: center;
+    padding-left: 20px;
   }
    
   .countdown-item span {
     display: block;
-    font-size: 30px;
+    font-size: 24px;
   }
    
   .label {
-    font-size: 25px;
+    font-size: 20px;
     color: #ffffff;
   }
 
   .time {
     color: #ffffff;
-    font-size: 40px;
+    font-size: 24px;
   }
 
   .schet h2 {
     color: white;
+    font-size: 24px;
   }
 
 
